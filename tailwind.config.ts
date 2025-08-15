@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				chat: {
+					background: 'hsl(var(--chat-background))',
+					'user-message': 'hsl(var(--user-message))',
+					'user-message-foreground': 'hsl(var(--user-message-foreground))',
+					'bot-message': 'hsl(var(--bot-message))',
+					'bot-message-foreground': 'hsl(var(--bot-message-foreground))',
+					'message-border': 'hsl(var(--message-border))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +75,16 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'message': 'var(--shadow-message)',
+				'card-custom': 'var(--shadow-card)',
+				'input-focus': 'var(--shadow-input)'
+			},
+			backgroundImage: {
+				'gradient-user': 'var(--gradient-user)',
+				'gradient-bot': 'var(--gradient-bot)',
+				'gradient-send': 'var(--gradient-send)'
 			},
 			keyframes: {
 				'accordion-down': {
