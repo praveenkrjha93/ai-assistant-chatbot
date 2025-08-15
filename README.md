@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# Welcome to your Personal AI Assistant - Bandhu
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/226bb91f-d59d-4498-a8aa-afad74d8109e
+This project is designed to provide a seamless interface for managing chat interactions efficiently. It leverages modern web technologies to deliver a responsive and intuitive user experience.
 
-## How can I edit this code?
+## Technologies Used
 
-There are several ways of editing your application.
+This project is built with:
+- **Vite**: A modern frontend build tool that provides faster and leaner development.
+- **TypeScript**: For adding types to JavaScript, ensuring more robust code.
+- **React**: A JavaScript library for building user interfaces.
+- **shadcn-ui**: A UI framework that offers a variety of ready-to-use components.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
 
-**Use Lovable**
+## How It Works
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/226bb91f-d59d-4498-a8aa-afad74d8109e) and start prompting.
+The application allows users to interact through a chat interface, managing sessions and messages dynamically. It integrates various components for handling different aspects of the chat experience, ensuring a smooth and efficient communication flow.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Visuals
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+![Chatbot UI](Chat-bot-1.png)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## How to Get Started
 
-Follow these steps:
+Here’s how you can set up and start contributing to the project:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository using the project's Git URL.
+git clone https://github.com/praveenkrjha93/ai-assistant-chatbot.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory.
+cd ai-assistant-chatbot
 
-# Step 3: Install the necessary dependencies.
+# Install the necessary dependencies.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To deploy this project, simply open [bandhu](https://bandhu.dev/projects/226bb91f-d59d-4498-a8aa-afad74d8109e) and click on Share -> Publish.
 
-**Use GitHub Codespaces**
+## Custom Domain Connection
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/226bb91f-d59d-4498-a8aa-afad74d8109e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To connect a custom domain to your bandhu project, navigate to Project > Settings > Domains and click Connect Domain. For a detailed guide, visit [Setting up a custom domain](https://docs.bandhu.dev/tips-tricks/custom-domain#step-by-step-guide).
