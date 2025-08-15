@@ -11,11 +11,11 @@ const Index = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-main bg-clip-text text-transparent mb-4">
-            AI Chat Assistant
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-main bg-clip-text text-transparent mb-6">
+            Joule AI Assistant
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience seamless conversations with our intelligent chatbot
+          <p className="text-xl text-sap-gray max-w-3xl mx-auto leading-relaxed">
+            Experience enterprise-grade AI conversations powered by SAP's intelligent business platform
           </p>
         </motion.div>
 

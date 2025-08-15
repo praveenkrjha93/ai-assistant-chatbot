@@ -54,12 +54,17 @@ export default {
 				},
 				chat: {
 					background: 'hsl(var(--chat-background))',
+					surface: 'hsl(var(--chat-surface))',
 					'user-message': 'hsl(var(--user-message))',
 					'user-message-foreground': 'hsl(var(--user-message-foreground))',
 					'bot-message': 'hsl(var(--bot-message))',
 					'bot-message-foreground': 'hsl(var(--bot-message-foreground))',
 					'message-border': 'hsl(var(--message-border))'
 				},
+				'sap-blue': 'hsl(var(--sap-blue))',
+				'sap-blue-light': 'hsl(var(--sap-blue-light))',
+				'sap-gray': 'hsl(var(--sap-gray))',
+				'enterprise-surface': 'hsl(var(--enterprise-surface))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -79,7 +84,8 @@ export default {
 			boxShadow: {
 				'message': 'var(--shadow-message)',
 				'card-custom': 'var(--shadow-card)',
-				'input-focus': 'var(--shadow-input)'
+				'input-focus': 'var(--shadow-input)',
+				'glow': 'var(--shadow-glow)'
 			},
 			backgroundImage: {
 				'gradient-main': 'var(--gradient-main)',

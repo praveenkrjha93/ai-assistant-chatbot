@@ -8,54 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 9 9 11;
-    --foreground: 250 250 250;
+    --background: 17 24 39;
+    --foreground: 248 250 252;
 
-    --card: 24 24 27;
-    --card-foreground: 250 250 250;
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
 
-    --popover: 24 24 27;
-    --popover-foreground: 250 250 250;
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
 
-    --primary: 99 179 237;
-    --primary-foreground: 9 9 11;
+    --primary: 14 165 233;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 39 39 42;
-    --secondary-foreground: 212 212 216;
+    --secondary: 51 65 85;
+    --secondary-foreground: 203 213 225;
 
-    --muted: 39 39 42;
-    --muted-foreground: 161 161 170;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
 
-    --accent: 39 39 42;
-    --accent-foreground: 147 197 253;
+    --accent: 37 99 235;
+    --accent-foreground: 248 250 252;
 
     --destructive: 239 68 68;
-    --destructive-foreground: 250 250 250;
+    --destructive-foreground: 248 250 252;
 
-    --border: 39 39 42;
-    --input: 24 24 27;
-    --ring: 99 179 237;
+    --border: 51 65 85;
+    --input: 30 41 59;
+    --ring: 14 165 233;
 
-    /* Chat-specific colors */
-    --chat-background: 18 18 20;
-    --user-message: 99 179 237;
-    --user-message-foreground: 9 9 11;
-    --bot-message: 39 39 42;
-    --bot-message-foreground: 250 250 250;
-    --message-border: 63 63 70;
+    /* SAP Joule-inspired chat colors */
+    --chat-background: 15 23 42;
+    --chat-surface: 30 41 59;
+    --user-message: 14 165 233;
+    --user-message-foreground: 255 255 255;
+    --bot-message: 51 65 85;
+    --bot-message-foreground: 248 250 252;
+    --message-border: 71 85 105;
+    --sap-blue: 14 165 233;
+    --sap-blue-light: 56 189 248;
+    --sap-gray: 100 116 139;
+    --enterprise-surface: 24 33 52;
     
-    /* Gradients */
-    --gradient-main: linear-gradient(135deg, hsl(199 89% 48%), hsl(217 91% 60%));
-    --gradient-user: linear-gradient(135deg, hsl(199 89% 48%), hsl(200 98% 39%));
-    --gradient-bot: linear-gradient(135deg, hsl(220 7% 18%), hsl(220 6% 23%));
-    --gradient-send: linear-gradient(135deg, hsl(199 89% 48%), hsl(200 98% 39%));
-    --gradient-header: linear-gradient(135deg, hsl(220 13% 12%), hsl(220 9% 16%));
-    --gradient-background: linear-gradient(135deg, hsl(220 13% 4%) 0%, hsl(220 10% 8%) 50%, hsl(220 13% 4%) 100%);
+    /* Enterprise gradients */
+    --gradient-main: linear-gradient(135deg, hsl(207 89% 86%), hsl(212 100% 48%));
+    --gradient-user: linear-gradient(135deg, hsl(212 100% 48%), hsl(217 91% 60%));
+    --gradient-bot: linear-gradient(135deg, hsl(215 25% 27%), hsl(215 28% 35%));
+    --gradient-send: linear-gradient(135deg, hsl(212 100% 48%), hsl(217 91% 60%));
+    --gradient-header: linear-gradient(135deg, hsl(221 39% 11%), hsl(215 28% 17%));
+    --gradient-background: linear-gradient(135deg, hsl(221 39% 11%) 0%, hsl(215 28% 17%) 50%, hsl(221 39% 11%) 100%);
     
-    /* Shadows */
-    --shadow-message: 0 4px 12px -2px hsl(0 0% 0% / 0.4);
-    --shadow-card: 0 12px 32px -8px hsl(0 0% 0% / 0.6), 0 25px 50px -15px hsl(0 0% 0% / 0.4);
-    --shadow-input: 0 0 0 1px hsl(var(--ring)), 0 4px 12px -2px hsl(199 89% 48% / 0.3);
+    /* Enterprise shadows */
+    --shadow-message: 0 4px 16px -4px hsl(220 25% 25% / 0.3), 0 8px 32px -8px hsl(220 25% 25% / 0.15);
+    --shadow-card: 0 12px 40px -8px hsl(220 25% 25% / 0.4), 0 25px 60px -15px hsl(220 25% 25% / 0.3);
+    --shadow-input: 0 0 0 1px hsl(var(--ring)), 0 4px 16px -4px hsl(212 100% 48% / 0.25);
+    --shadow-glow: 0 0 20px hsl(212 100% 48% / 0.15);
 
     --radius: 0.5rem;
 
