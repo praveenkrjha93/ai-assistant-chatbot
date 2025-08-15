@@ -11,16 +11,12 @@ interface Message {
   timestamp: Date;
 }
 
-const initialMessages: Message[] = [
-  {
-    id: "1",
-    content: "Hello! I'm Joule, your AI business assistant. I can help you with analytics, process optimization, and strategic insights. What would you like to explore today?",
-    isBot: true,
-    timestamp: new Date(),
-  },
-];
+interface ChatContainerProps {
+  messages: Message[];
+  onSendMessage: (content: string) => void;
+}
 
-const jouleResponses = [
+const BandhuResponses = [
   "Based on your data patterns, I've identified several optimization opportunities. Let me analyze the key metrics for you...",
   "I understand your business context. Here's what the data reveals about performance trends and potential improvements...",
   "Excellent question! Drawing from enterprise best practices, I recommend the following strategic approach...",
@@ -29,8 +25,7 @@ const jouleResponses = [
   "Thank you for that context. Based on SAP's extensive business intelligence, here's my strategic recommendation...",
 ];
 
-export const ChatContainer = () => {
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+export const ChatContainer = ({ messages, onSendMessage }: ChatContainerProps) => {
   const [isTyping, setIsTyping] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState<'connecting' | 'connected' | 'error'>('connected');
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -51,73 +46,66 @@ export const ChatContainer = () => {
   }, []);
 
   const handleSendMessage = async (content: string) => {
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      content,
-      isBot: false,
-      timestamp: new Date(),
-    };
-
-    setMessages(prev => [...prev, userMessage]);
     setIsTyping(true);
-
+    
+    // Call the parent's onSendMessage function
+    onSendMessage(content);
+    
     // Simulate AI processing with realistic delay
     setTimeout(() => {
-      const botResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        content: jouleResponses[Math.floor(Math.random() * jouleResponses.length)],
-        isBot: true,
-        timestamp: new Date(),
-      };
-
-      setMessages(prev => [...prev, botResponse]);
       setIsTyping(false);
     }, 1500 + Math.random() * 2000);
   };
 
   return (
-    <div className="flex flex-col h-[700px] md:h-[750px] bg-gradient-to-b from-enterprise-surface/90 to-chat-surface/90 backdrop-blur-xl shadow-card rounded-2xl overflow-hidden border border-border/30">
-      {/* Header */}
+    <div className="flex flex-col h-[700px] md:h-[750px] glass-strong shadow-card rounded-3xl overflow-hidden border border-white/20 relative">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
+      {/* Enhanced Header */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="bg-gradient-header p-6 border-b border-border/30 relative overflow-hidden"
+        className="relative p-6 border-b border-white/10 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-sap-blue/5 via-transparent to-sap-blue/5"></div>
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-mesh opacity-20"></div>
+        
         <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <motion.div 
-              className="w-12 h-12 bg-gradient-to-br from-sap-blue to-sap-blue-light rounded-2xl flex items-center justify-center shadow-glow"
+              className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center pulse-glow border border-white/20"
               animate={{ 
-                boxShadow: connectionStatus === 'connected' 
-                  ? '0 0 20px hsl(212 100% 48% / 0.3)' 
-                  : '0 0 10px hsl(212 100% 48% / 0.1)' 
+                rotate: [0, 5, -5, 0],
               }}
-              transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Brain className="w-7 h-7 text-white" />
+              <Brain className="w-8 h-8 text-white drop-shadow-lg" />
             </motion.div>
             <div>
-              <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
-                Joule
+              <h2 className="text-2xl font-bold text-foreground flex items-center gap-3">
+                <span className="gradient-text">Bandhu</span>
                 <motion.div
-                  animate={{ rotate: 360 }}
+                  animate={{ rotate: 360, scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
-                  <Sparkles className="w-5 h-5 text-sap-blue" />
+                  <Sparkles className="w-6 h-6 text-indigo-400 drop-shadow-lg" />
                 </motion.div>
               </h2>
               <div className="flex items-center gap-2 mt-1">
                 <motion.div 
-                  className={`w-2 h-2 rounded-full ${
-                    connectionStatus === 'connected' ? 'bg-green-400' :
-                    connectionStatus === 'connecting' ? 'bg-yellow-400' : 'bg-red-400'
+                  className={`w-2.5 h-2.5 rounded-full shadow-lg ${
+                    connectionStatus === 'connected' ? 'bg-emerald-400 shadow-emerald-400/50' :
+                    connectionStatus === 'connecting' ? 'bg-amber-400 shadow-amber-400/50' : 'bg-red-400 shadow-red-400/50'
                   }`}
-                  animate={{ scale: [1, 1.2, 1] }}
+                  animate={{ 
+                    scale: [1, 1.3, 1],
+                    opacity: [0.7, 1, 0.7]
+                  }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                <p className="text-sm text-sap-gray">
+                <p className="text-sm text-sap-gray font-medium">
                   {connectionStatus === 'connected' ? 'AI Assistant Ready' :
                    connectionStatus === 'connecting' ? 'Connecting...' : 'Connection Error'}
                 </p>
@@ -125,8 +113,8 @@ export const ChatContainer = () => {
             </div>
           </div>
           <div className="text-right">
-            <div className="text-xs text-sap-gray">Enterprise AI</div>
-            <div className="text-xs text-sap-blue font-medium">SAP Business Intelligence</div>
+            <div className="text-xs text-sap-gray/80 font-medium">Next-Gen AI</div>
+            <div className="text-xs bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-semibold">Intelligent Assistant</div>
           </div>
         </div>
       </motion.div>
@@ -174,7 +162,7 @@ export const ChatContainer = () => {
                       />
                     ))}
                   </div>
-                  <p className="text-sm text-sap-gray">Joule is analyzing...</p>
+                  <p className="text-sm text-sap-gray">Bandhu is analyzing...</p>
                 </div>
               </div>
             </motion.div>
