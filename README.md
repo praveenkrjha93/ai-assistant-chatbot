@@ -19,12 +19,11 @@ The application allows users to interact through a chat interface, managing sess
 
 ## Visuals
 
-
 ![Chatbot UI](Chat-bot-1.png)
 
 ## How to Get Started
 
-Here’s how you can set up and start contributing to the project:
+Here's how you can set up and start contributing to the project:
 
 ```sh
 # Clone the repository using the project's Git URL.
