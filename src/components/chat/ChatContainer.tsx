@@ -73,14 +73,23 @@ export const ChatContainer = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-gradient-to-r from-primary/10 to-accent/10 p-4 border-b border-border"
+        className="bg-gradient-header p-6 border-b border-border/50"
       >
-        <h2 className="text-lg font-semibold text-foreground">AI Assistant</h2>
-        <p className="text-sm text-muted-foreground">Ask me anything!</p>
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-main rounded-full flex items-center justify-center shadow-message">
+            <div className="w-6 h-6 bg-white/90 rounded-full flex items-center justify-center">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-foreground">AI Assistant</h2>
+            <p className="text-sm text-muted-foreground">Online • Ready to help</p>
+          </div>
+        </div>
       </motion.div>
 
       {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto p-4 bg-chat-background">
+      <div className="flex-1 overflow-y-auto p-6 bg-chat-background">
         <div className="space-y-1">
           {messages.map((message, index) => (
             <ChatMessage

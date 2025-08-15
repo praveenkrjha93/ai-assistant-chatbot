@@ -82,9 +82,11 @@ export default {
 				'input-focus': 'var(--shadow-input)'
 			},
 			backgroundImage: {
+				'gradient-main': 'var(--gradient-main)',
 				'gradient-user': 'var(--gradient-user)',
 				'gradient-bot': 'var(--gradient-bot)',
-				'gradient-send': 'var(--gradient-send)'
+				'gradient-send': 'var(--gradient-send)',
+				'gradient-header': 'var(--gradient-header)'
 			},
 			keyframes: {
 				'accordion-down': {
