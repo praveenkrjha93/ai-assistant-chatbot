@@ -86,7 +86,8 @@ export default {
 				'gradient-user': 'var(--gradient-user)',
 				'gradient-bot': 'var(--gradient-bot)',
 				'gradient-send': 'var(--gradient-send)',
-				'gradient-header': 'var(--gradient-header)'
+				'gradient-header': 'var(--gradient-header)',
+				'gradient-background': 'var(--gradient-background)'
 			},
 			keyframes: {
 				'accordion-down': {

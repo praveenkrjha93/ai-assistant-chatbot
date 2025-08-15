@@ -3,7 +3,7 @@ import { ChatContainer } from "@/components/chat/ChatContainer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent/30 to-background py-8 px-4">
+    <div className="min-h-screen bg-gradient-background py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
